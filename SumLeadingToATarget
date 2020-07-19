@@ -1,0 +1,20 @@
+class Solution:
+    def twoSum(self, num, tar):
+        pso = 0
+        for i,value in enumerate(num):
+            sear = tar-value
+            if sear == value:
+                try:
+                    pos = num.index(sear,0,i)
+                except:
+                    try:
+                        pos = num.index(sear,i+1,len(num)+1)
+                    except:
+                        continue
+            else:
+                try:
+                    pos = num.index(sear)
+                except:
+                    continue
+            if pos!=i:
+                return (i,pos)
