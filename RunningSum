@@ -1,0 +1,10 @@
+class Solution:
+    def runningSum(self, nums):
+        rsum=[]
+        for i,val in enumerate(nums):
+            if i==0:
+                rsum.append(val)
+            else:
+                temp = rsum[i-1]+val
+                rsum.append(temp)
+        return rsum
