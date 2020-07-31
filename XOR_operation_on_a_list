@@ -1,0 +1,11 @@
+class Solution:
+    def xorOperation(self, n: int, start: int) -> int:
+        nums=[0]*n
+        for i in range(0,len(nums)):
+            nums[i] = start + 2*i
+        res=nums[0]
+        for i in range(0,len(nums)-1):
+            res = res^nums[i+1]
+        return res
+        
+print(Solution().xorOperation(5,0))
