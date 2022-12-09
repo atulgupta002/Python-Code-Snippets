@@ -14,4 +14,3 @@ def reverse(s):
     swap(s[p1],s[p2])
     p1 += 1
     p2 -= 1
-                 
